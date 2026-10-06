@@ -1,0 +1,782 @@
+/**
+ * HA-BPMN-Manager: Layout & UI Collision Protection
+ *
+ * Resolves overlapping and collision issues between:
+ * - Token Simulation Mode Toggle (.bts-toggle-mode)
+ * - Modeler Tool Palette (.djs-palette)
+ * - Subprocess / Drilldown Breadcrumbs Navigation (.bjs-breadcrumbs)
+ *
+ * @package HA_BPMN_Manager
+ */
+
+/* 1. Relocate Token Simulation Mode Toggle to bottom-left corner clear of the modeler palette */
+.bjs-container .bts-toggle-mode {
+    position: absolute !important;
+    bottom: 20px !important;
+    top: auto !important;
+    left: 80px !important;
+    right: auto !important;
+    z-index: 25 !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+    width: auto !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+    border-radius: 6px !important;
+    background-color: #ffffff !important;
+    color: #344054 !important;
+    border: 1px solid #d0d5dd !important;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.1) !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+}
+
+.bjs-container .bts-toggle-mode:hover {
+    background-color: #f8fafc !important;
+    border-color: #94a3b8 !important;
+    color: #0f172a !important;
+}
+
+.bjs-container.simulation .bts-toggle-mode {
+    background-color: #ecfdf5 !important;
+    border-color: #6ee7b7 !important;
+    color: #047857 !important;
+}
+
+.bjs-container .bts-toggle-mode .bts-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    margin-left: 4px !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* Enforce compact SVG icon dimensions inside token simulation */
+.bjs-container .bts-toggle-mode .bts-toggle svg,
+.bjs-container .bts-toggle-mode svg,
+.bjs-container .bts-icon svg {
+    width: 24px !important;
+    height: 14px !important;
+    max-width: 24px !important;
+    max-height: 14px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+/* 4. Professional & User-friendly Token Simulation Controls (Playback bar) */
+.bjs-container .bts-palette {
+    position: absolute !important;
+    bottom: 20px !important;
+    top: auto !important;
+    left: 240px !important;
+    right: auto !important;
+    z-index: 25 !important;
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 3px !important;
+    background: #ffffff !important;
+    padding: 3px !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 6px rgba(16, 24, 40, 0.1) !important;
+    height: 32px !important;
+    box-sizing: border-box !important;
+}
+
+/* Two-column palette layout support: shift toggle and playback bar further right when palette is wide */
+.bjs-container.djs-palette-two-column .bts-toggle-mode,
+.bjs-container:has(.djs-palette.two-column) .bts-toggle-mode {
+    left: 130px !important;
+}
+
+.bjs-container.djs-palette-two-column .bts-palette,
+.bjs-container:has(.djs-palette.two-column) .bts-palette {
+    left: 290px !important;
+}
+
+/* Notifications: Float cleanly above the simulation controls */
+.bjs-container .bts-notifications,
+.bts-notifications {
+    position: absolute !important;
+    bottom: 60px !important;
+    left: 80px !important;
+    z-index: 26 !important;
+}
+
+.bjs-container.djs-palette-two-column .bts-notifications,
+.bjs-container:has(.djs-palette.two-column) .bts-notifications {
+    left: 130px !important;
+}
+
+/* Hard reset of theme button styles on token simulation palette buttons */
+.bjs-container .bts-palette .bts-entry,
+.bjs-container .bts-palette button,
+button.bts-entry {
+    all: unset !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 6px !important;
+    background: #f8fafc !important;
+    color: #334155 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-sizing: border-box !important;
+    line-height: 1 !important;
+    font-size: 13px !important;
+    transition: all 0.15s ease !important;
+}
+
+.bjs-container .bts-palette .bts-entry:hover,
+button.bts-entry:hover {
+    background: #e2e8f0 !important;
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+    transform: translateY(-1px) !important;
+}
+
+.bjs-container .bts-palette .bts-entry.active,
+button.bts-entry.active {
+    background: #10b981 !important;
+    color: #ffffff !important;
+    border-color: #059669 !important;
+}
+
+/* Disabled state for simulation entries (e.g. Pause, Reset before Start Event is clicked) */
+.bjs-container .bts-palette .bts-entry.disabled,
+.bjs-container .bts-palette .bts-entry[disabled],
+button.bts-entry.disabled,
+button.bts-entry[disabled] {
+    opacity: 0.35 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    background: #f1f5f9 !important;
+    color: #94a3b8 !important;
+    border-color: #e2e8f0 !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.bjs-container .bts-palette .bts-entry svg,
+button.bts-entry svg {
+    width: 14px !important;
+    height: 14px !important;
+    max-width: 14px !important;
+    max-height: 14px !important;
+    fill: currentColor !important;
+    color: inherit !important;
+    display: block !important;
+}
+
+/* 5. Professional & User-friendly Linter Status Button */
+/* 5. Professional & User-friendly Linter Status Button */
+.bjs-container .bjsl-button,
+button.bjsl-button {
+    all: unset !important;
+    position: absolute !important;
+    bottom: 72px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 25 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 7px !important;
+    height: 30px !important;
+    padding: 0 14px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+    border-radius: 20px !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    user-select: none !important;
+    box-shadow: 0 2px 6px rgba(16, 24, 40, 0.1) !important;
+    box-sizing: border-box !important;
+    width: auto !important;
+    white-space: nowrap !important;
+    text-transform: none !important;
+    transition: all 0.15s ease !important;
+}
+
+.bjs-container .bjsl-button:active,
+button.bjsl-button:active {
+    transform: translateX(-50%) scale(0.97) !important;
+}
+
+.bjs-container .bjsl-button *,
+button.bjsl-button * {
+    pointer-events: none !important;
+}
+
+/* Vertical centering for linter icon */
+.bjs-container .bjsl-button .icon,
+button.bjsl-button .icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 14px !important;
+    height: 14px !important;
+    line-height: 1 !important;
+    vertical-align: middle !important;
+}
+
+.bjs-container .bjsl-button .icon svg,
+button.bjsl-button .icon svg {
+    width: 13px !important;
+    height: 13px !important;
+    max-width: 13px !important;
+    max-height: 13px !important;
+    display: block !important;
+    margin: 0 !important;
+    fill: currentColor !important;
+}
+
+/* Linter: Errors (clear, user-friendly soft red, NOT theme blue) */
+.bjs-container .bjsl-button.bjsl-button-error,
+button.bjsl-button.bjsl-button-error {
+    background: #fef2f2 !important;
+    color: #b91c1c !important;
+    border: 1px solid #fecaca !important;
+}
+
+.bjs-container .bjsl-button.bjsl-button-error:hover,
+button.bjsl-button.bjsl-button-error:hover {
+    background: #fee2e2 !important;
+    border-color: #fca5a5 !important;
+    color: #991b1b !important;
+}
+
+/* Linter: Warnings only (warm amber, NOT blue) */
+.bjs-container .bjsl-button.bjsl-button-warning,
+button.bjsl-button.bjsl-button-warning {
+    background: #fffbeb !important;
+    color: #b45309 !important;
+    border: 1px solid #fde68a !important;
+}
+
+.bjs-container .bjsl-button.bjsl-button-warning:hover,
+button.bjsl-button.bjsl-button-warning:hover {
+    background: #fef3c7 !important;
+    border-color: #fcd34d !important;
+}
+
+/* Linter: No issues / Success (soft emerald green) */
+.bjs-container .bjsl-button.bjsl-button-success,
+button.bjsl-button.bjsl-button-success {
+    background: #f0fdf4 !important;
+    color: #15803d !important;
+    border: 1px solid #bbf7d0 !important;
+}
+
+.bjs-container .bjsl-button.bjsl-button-success:hover,
+button.bjsl-button.bjsl-button-success:hover {
+    background: #dcfce7 !important;
+    border-color: #86efac !important;
+}
+
+/* Linter: Inactive / Idle (subtle light grey) */
+.bjs-container .bjsl-button.bjsl-button-inactive,
+button.bjsl-button.bjsl-button-inactive {
+    background: #f8fafc !important;
+    color: #64748b !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+.bjs-container .bjsl-button.bjsl-button-inactive:hover,
+button.bjsl-button.bjsl-button-inactive:hover {
+    background: #f1f5f9 !important;
+    color: #334155 !important;
+    border-color: #cbd5e1 !important;
+}
+
+/* Linter issues popup: Centered above linter button */
+.bjs-container .bjsl-issues,
+.bjsl-issues {
+    position: absolute !important;
+    bottom: 110px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    max-width: 420px !important;
+    min-width: 280px !important;
+    max-height: 280px !important;
+    overflow-y: auto !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
+    padding: 10px !important;
+    font-size: 12px !important;
+    color: #334155 !important;
+    z-index: 30 !important;
+}
+
+/* 7. Token Simulation Speed Controls (docked neatly next to playback bar on bottom-left) */
+.bjs-container .bts-set-animation-speed,
+.bts-set-animation-speed {
+    position: absolute !important;
+    bottom: 20px !important;
+    left: 360px !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
+    z-index: 25 !important;
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    background: #ffffff !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 6px rgba(16, 24, 40, 0.1) !important;
+    padding: 3px 6px !important;
+    height: 32px !important;
+    box-sizing: border-box !important;
+    font-size: 12px !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+.bjs-container.djs-palette-two-column .bts-set-animation-speed,
+.bjs-container:has(.djs-palette.two-column) .bts-set-animation-speed {
+    left: 410px !important;
+}
+
+.bts-set-animation-speed.hidden {
+    display: none !important;
+}
+
+.bts-set-animation-speed .bts-animation-speed-buttons {
+    display: inline-flex !important;
+    gap: 2px !important;
+}
+
+.bts-set-animation-speed button {
+    all: unset !important;
+    cursor: pointer !important;
+    padding: 3px 8px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: #475569 !important;
+    border-radius: 5px !important;
+    transition: all 0.15s ease !important;
+}
+
+.bts-set-animation-speed button:hover {
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+
+.bts-set-animation-speed button.active {
+    background: #10b981 !important;
+    color: #ffffff !important;
+}
+
+/* 2. Position the Modeler Palette at its standard position below breadcrumbs */
+.bjs-container .djs-palette {
+    top: 60px !important;
+    left: 20px !important;
+    z-index: 15 !important;
+}
+
+/* Keep Modeler Palette visible but greyed out & non-interactive during simulation */
+.bjs-container.simulation .djs-palette,
+.simulation .djs-palette {
+    display: block !important;
+    opacity: 0.3 !important;
+    filter: grayscale(100%) !important;
+    pointer-events: none !important;
+    user-select: none !important;
+}
+
+/* 6. Modern Token Simulation Log Panel */
+.bjs-container .bts-log,
+.bts-log {
+    position: absolute !important;
+    top: 60px !important;
+    right: 20px !important;
+    width: 320px !important;
+    max-width: calc(100% - 40px) !important;
+    max-height: 380px !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+    z-index: 90 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+.bjs-container .bts-log.hidden,
+.bts-log.hidden {
+    display: none !important;
+}
+
+.bts-log .header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 14px !important;
+    font-weight: 600 !important;
+    color: #0f172a !important;
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    user-select: none !important;
+}
+
+.bts-log .header .actions {
+    display: flex !important;
+    gap: 6px !important;
+    align-items: center !important;
+}
+
+.bts-log .header .actions button,
+.bts-log .header .actions .entry {
+    all: unset !important;
+    cursor: pointer !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    color: #64748b !important;
+    font-size: 11px !important;
+    line-height: 1 !important;
+    transition: all 0.1s ease !important;
+}
+
+.bts-log .header .actions button:hover,
+.bts-log .header .actions .entry:hover {
+    background: #e2e8f0 !important;
+    color: #0f172a !important;
+}
+
+.bts-log .content {
+    flex: 1 1 auto !important;
+    overflow-y: auto !important;
+    padding: 8px 12px !important;
+    margin: 0 !important;
+    list-style: none !important;
+    max-height: 320px !important;
+}
+
+.bts-log .content .entry {
+    padding: 6px 8px !important;
+    margin-bottom: 4px !important;
+    border-radius: 4px !important;
+    background: #f8fafc !important;
+    border: 1px solid #f1f5f9 !important;
+    line-height: 1.4 !important;
+    color: #334155 !important;
+    font-size: 11px !important;
+    word-break: break-word !important;
+}
+
+.bts-log .content .entry:last-child {
+    margin-bottom: 0 !important;
+}
+
+.bts-log .content .entry.info {
+    border-left: 3px solid #3b82f6 !important;
+}
+
+.bts-log .content .entry.warning {
+    border-left: 3px solid #f59e0b !important;
+}
+
+.bts-log .content .entry.error {
+    border-left: 3px solid #ef4444 !important;
+}
+
+/* 3. Subprocess Breadcrumbs: Natural position at top-left corner, fully unobstructed */
+.bjs-container .bjs-breadcrumbs {
+    position: absolute !important;
+    top: 20px !important;
+    left: 20px !important;
+    z-index: 20 !important;
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.96) !important;
+    padding: 4px 14px !important;
+    border-radius: 6px !important;
+    border: 1px solid #d0d5dd !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12) !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+}
+
+/* Show breadcrumbs when active */
+.bjs-container.bjs-breadcrumbs-shown .bjs-breadcrumbs,
+.bjs-breadcrumbs-shown .bjs-breadcrumbs {
+    display: inline-flex !important;
+}
+
+/* When 2-column palette is open, shift breadcrumbs further if needed */
+.bjs-container.djs-palette-shown.djs-palette-two-column .bjs-breadcrumbs {
+    left: 140px !important;
+}
+
+/* Ensure breadcrumb links are distinct and clickable */
+.bjs-breadcrumbs li {
+    display: inline-flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 4px !important;
+}
+
+.bjs-breadcrumbs li a {
+    color: #0073aa !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+}
+
+.bjs-breadcrumbs li a:hover {
+    color: #005177 !important;
+    text-decoration: underline !important;
+}
+
+.bjs-breadcrumbs li:last-of-type a {
+    color: #333333 !important;
+    cursor: default !important;
+    text-decoration: none !important;
+    font-weight: normal !important;
+}
+
+/* 8. Modern Minimap Controls (top-right, unobstructed by bpmn.io logo) */
+.djs-minimap.open {
+    position: absolute !important;
+    top: 60px !important;
+    right: 20px !important;
+    bottom: auto !important;
+    left: auto !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+    overflow: hidden !important;
+    z-index: 70 !important;
+}
+
+.djs-minimap.open .toggle {
+    all: unset !important;
+    position: absolute !important;
+    top: 6px !important;
+    right: 6px !important;
+    width: 22px !important;
+    height: 22px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    z-index: 10 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.15s ease !important;
+}
+
+.djs-minimap.open .toggle:hover {
+    background: #fee2e2 !important;
+    border-color: #fca5a5 !important;
+    transform: scale(1.05) !important;
+}
+
+.djs-minimap.open .toggle:before {
+    content: "✕" !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    color: #64748b !important;
+}
+
+.djs-minimap.open .toggle:hover:before {
+    color: #ef4444 !important;
+}
+
+.djs-minimap:not(.open) {
+    position: absolute !important;
+    top: 60px !important;
+    right: 20px !important;
+    bottom: auto !important;
+    left: auto !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    z-index: 70 !important;
+}
+
+.djs-minimap:not(.open) .toggle {
+    all: unset !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    height: 32px !important;
+    padding: 0 12px !important;
+    background: #ffffff !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 6px rgba(16, 24, 40, 0.1) !important;
+    cursor: pointer !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: #334155 !important;
+    transition: all 0.15s ease !important;
+}
+
+.djs-minimap:not(.open) .toggle:hover {
+    background: #f8fafc !important;
+    color: #0f172a !important;
+    border-color: #94a3b8 !important;
+    transform: translateY(-1px) !important;
+}
+
+.djs-minimap:not(.open) .toggle:before {
+    content: "⊞" !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+    color: #64748b !important;
+}
+
+.djs-minimap:not(.open) .toggle:after {
+    content: "Minimap" !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+}
+
+/* ==========================================================================
+   Universal Search Highlighting (Admin + Frontend)
+   ========================================================================== */
+.djs-element.ha-bpmn-search-match > .djs-visual > :not(text),
+.ha-bpmn-search-match > .djs-visual > :not(text),
+.djs-element.ha-bpmn-search-match .djs-visual rect,
+.djs-element.ha-bpmn-search-match .djs-visual circle,
+.djs-element.ha-bpmn-search-match .djs-visual polygon {
+    stroke: #f59e0b !important;
+    stroke-width: 3.5px !important;
+}
+
+.djs-element.ha-bpmn-search-active > .djs-visual > :not(text),
+.ha-bpmn-search-active > .djs-visual > :not(text),
+.djs-element.ha-bpmn-search-active .djs-visual rect,
+.djs-element.ha-bpmn-search-active .djs-visual circle,
+.djs-element.ha-bpmn-search-active .djs-visual polygon {
+    stroke: #d97706 !important;
+    stroke-width: 5px !important;
+    fill: #fef3c7 !important;
+    filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.9)) !important;
+}
+
+/* ==========================================================================
+   WordPress Sidebar: Save Draft & Preview Buttons Perfect Alignment
+   ========================================================================== */
+.post-type-bpmnm #minor-publishing-actions,
+#minor-publishing-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 10px 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    float: none !important;
+    clear: both !important;
+}
+
+.post-type-bpmnm #minor-publishing-actions::before,
+.post-type-bpmnm #minor-publishing-actions::after,
+#minor-publishing-actions::before,
+#minor-publishing-actions::after,
+.post-type-bpmnm #minor-publishing-actions .clear,
+#minor-publishing-actions .clear {
+    display: none !important;
+}
+
+.post-type-bpmnm #minor-publishing-actions #save-action,
+.post-type-bpmnm #minor-publishing-actions .preview-action,
+.post-type-bpmnm #minor-publishing-actions #preview-action,
+#minor-publishing-actions #save-action,
+#minor-publishing-actions .preview-action,
+#minor-publishing-actions #preview-action {
+    float: none !important;
+    flex: 1 1 50% !important;
+    width: 50% !important;
+    min-width: 0 !important;
+    max-width: 50% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+}
+
+.post-type-bpmnm #minor-publishing-actions #save-action .button,
+.post-type-bpmnm #minor-publishing-actions .preview-action .button,
+.post-type-bpmnm #minor-publishing-actions #preview-action .button,
+#minor-publishing-actions #save-action .button,
+#minor-publishing-actions .preview-action .button,
+#minor-publishing-actions #preview-action .button,
+#minor-publishing-actions #save-post,
+#minor-publishing-actions #post-preview {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 32px !important;
+    min-height: 32px !important;
+    max-height: 32px !important;
+    line-height: 30px !important;
+    margin: 0 !important;
+    padding: 0 8px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    box-sizing: border-box !important;
+    vertical-align: middle !important;
+    float: none !important;
+    border-radius: 4px !important;
+}
+
+.post-type-bpmnm #minor-publishing-actions #save-action .spinner,
+#minor-publishing-actions #save-action .spinner {
+    position: absolute !important;
+    right: 4px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin: 0 !important;
+    float: none !important;
+    z-index: 5 !important;
+}
+

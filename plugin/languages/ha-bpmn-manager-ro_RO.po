@@ -1,0 +1,726 @@
+# Translation of HA-BPMN-Manager into Romanian
+# Copyright (C) 2020-present Alexander Hacker
+msgid ""
+msgstr ""
+"Project-Id-Version: HA-BPMN-Manager 2.5.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ha-bpmn-manager\n"
+"POT-Creation-Date: 2026-09-12 03:00+0000\n"
+"PO-Revision-Date: 2026-09-12 03:00+0000\n"
+"Last-Translator: Alexander Hacker <alex@seo-hacker.de>\n"
+"Language-Team: Romanian\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: HA-BPMN-Manager i18n Toolkit\n"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-renderer.php
+msgid "Zoom in"
+msgstr "Mărire"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-renderer.php
+msgid "Zoom out"
+msgstr "Micșorare"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-renderer.php
+msgid "Fit to screen"
+msgstr "Potrivire pe ecran"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-renderer.php
+msgid "Download SVG"
+msgstr "Descărcare SVG"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-renderer.php
+msgid "Download BPMN"
+msgstr "Descărcare BPMN"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-renderer.php
+msgid "Fullscreen"
+msgstr "Ecran complet"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "You have unsaved changes in your BPMN diagram. Do you really want to leave?"
+msgstr "Aveți modificări nesalvate în diagrama BPMN. Sigur doriți să părăsiți pagina?"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Drop BPMN file here to import"
+msgstr "Trageți fișierul BPMN aici pentru import"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Release to import .bpmn or .xml directly into diagram"
+msgstr "Eliberați pentru a importa .bpmn sau .xml direct în diagramă"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Import"
+msgstr "Import"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Failed to import BPMN diagram."
+msgstr "Importul diagramei BPMN a eșuat."
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Diagram imported successfully."
+msgstr "Diagrama a fost importată cu succes."
+
+#: includes/class-ha-bpmn-assets.php
+msgid "The selected file is not a valid BPMN 2.0 XML document."
+msgstr "Fișierul selectat nu este un document XML BPMN 2.0 valid."
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Invalid file format. Please upload a .bpmn or .xml file."
+msgstr "Format de fișier nevalid. Vă rugăm să încărcați un fișier .bpmn sau .xml."
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Error reading the file."
+msgstr "Eroare la citirea fișierului."
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Auto-Layout"
+msgstr "Aranjare automată"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Error during automatic layout calculation."
+msgstr "Eroare în timpul calculării automate a aspectului."
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Templates"
+msgstr "Șabloane"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Select Process Template"
+msgstr "Selectare șablon de proces"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Choose a ready-made template as a starting point for your BPMN 2.0 process:"
+msgstr "Alegeți un șablon gata făcut ca punct de plecare pentru procesul BPMN 2.0:"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Use template"
+msgstr "Utilizare șablon"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Unsaved changes will be lost. Do you really want to proceed?"
+msgstr "Modificările nesalvate se vor pierde. Sigur doriți să continuați?"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Revision History"
+msgstr "Istoricul reviziilor"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Loading revisions..."
+msgstr "Se încarcă reviziile..."
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Restore"
+msgstr "Restaurare"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Compare"
+msgstr "Comparare"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Added"
+msgstr "Adăugat"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Modified"
+msgstr "Modificat"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Deleted"
+msgstr "Șters"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "No structural changes detected between these versions."
+msgstr "Nu s-au detectat modificări structurale între aceste versiuni."
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Do you really want to restore this revision? Current unsaved changes will be overwritten."
+msgstr "Sigur doriți să restaurați această revizie? Modificările curente nesalvate vor fi suprascrise."
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "QM Handbook"
+msgstr "Manual de calitate"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Process Documentation & QM Handbook"
+msgstr "Documentația procesului și manualul de calitate"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Process Steps Overview"
+msgstr "Prezentare generală a etapelor procesului"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Step"
+msgstr "Pas"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Name / Action"
+msgstr "Nume / Acțiune"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Print Handbook"
+msgstr "Imprimare manual"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Search"
+msgstr "Căutare"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Search diagram..."
+msgstr "Căutare în diagramă..."
+
+#: includes/class-ha-bpmn-assets.php
+msgid "No matches found"
+msgstr "Niciun rezultat găsit"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Previous match"
+msgstr "Potrivirea anterioară"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Next match"
+msgstr "Potrivirea următoare"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Close search"
+msgstr "Închidere căutare"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Process Step Details"
+msgstr "Detalii etapă proces"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Step Type"
+msgstr "Tip pas"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Assigned Role / Lane"
+msgstr "Rol atribuit / Culoar"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "QM Instructions & Documentation"
+msgstr "Instrucțiuni de calitate și documentație"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "No additional instructions provided for this step."
+msgstr "Nu există instrucțiuni suplimentare pentru acest pas."
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Technical ID"
+msgstr "ID tehnic"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Close"
+msgstr "Închide"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Properties"
+msgstr "Proprietăți"
+
+#: includes/class-ha-bpmn-rest.php
+#: includes/class-ha-bpmn-rest.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Diagram not found."
+msgstr "Diagrama nu a fost găsită."
+
+#: includes/class-ha-bpmn-rest.php
+msgid "This diagram is password protected."
+msgstr "Această diagramă este protejată prin parolă."
+
+#: includes/class-ha-bpmn-rest.php
+msgid "You are not allowed to view this diagram."
+msgstr "Nu aveți permisiunea de a vizualiza această diagramă."
+
+#: includes/class-ha-bpmn-rest.php
+msgid "Diagram #%d"
+msgstr "Diagrama #%d"
+
+#: includes/class-ha-bpmn-rest.php
+msgid "You do not have permission to view revisions of this diagram."
+msgstr "Nu aveți permisiunea de a vizualiza reviziile acestei diagrame."
+
+#: includes/class-ha-bpmn-rest.php
+msgid "Unknown"
+msgstr "Necunoscut"
+
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "BPMN Diagrams"
+msgstr "Diagrame BPMN"
+
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "BPMN Diagram"
+msgstr "Diagramă BPMN"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Add New Diagram"
+msgstr "Adaugă diagramă nouă"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Add New BPMN Diagram"
+msgstr "Adaugă diagramă BPMN nouă"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Edit BPMN Diagram"
+msgstr "Editează diagrama BPMN"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "New BPMN Diagram"
+msgstr "Diagramă BPMN nouă"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "View Diagram"
+msgstr "Vizualizează diagrama"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Search Diagrams"
+msgstr "Caută diagrame"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "No diagrams found"
+msgstr "Nu s-au găsit diagrame"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "No diagrams found in Trash"
+msgstr "Nu s-au găsit diagrame la gunoi"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "All BPMN Diagrams"
+msgstr "Toate diagramele BPMN"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "BPMN Modeler"
+msgstr "Modelator BPMN"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Author"
+msgstr "Autor"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Undo (Ctrl+Z)"
+msgstr "Anulare (Ctrl+Z)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Undo"
+msgstr "Anulare"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Redo (Ctrl+Y)"
+msgstr "Refacere (Ctrl+Y)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Redo"
+msgstr "Refacere"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Process Templates"
+msgstr "Șabloane de proces"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Interactive Guide & BPMN-Quest"
+msgstr "Interactive Guide & BPMN-Quest"
+
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "BPMN-Quest"
+msgstr "BPMN-Quest"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Import BPMN XML (.bpmn, .xml)"
+msgstr "Import BPMN XML (.bpmn, .xml)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Auto-Layout Diagram"
+msgstr "Aranjează automat diagrama"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Search Diagram (Ctrl+F)"
+msgstr "Caută în diagramă (Ctrl+F)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Revision History & Semantic Diff"
+msgstr "Istoricul reviziilor și diferențe semantice"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "History"
+msgstr "Istoric"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Generate QM Process Handbook (Print/PDF)"
+msgstr "Generează manualul procesului (Tipărire/PDF)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Fullscreen / Zen Mode"
+msgstr "Ecran complet / Mod Zen"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Download BPMN XML"
+msgstr "Descărcare BPMN XML"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Toggle Properties Panel"
+msgstr "Comutare panou proprietăți"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Drop BPMN file here"
+msgstr "Trageți fișierul BPMN aici"
+
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Settings"
+msgstr "Setări"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "HA-BPMN-Manager"
+msgstr "HA-BPMN-Manager"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Configure modeling tools, taxonomy integration, frontend embedding, and system options."
+msgstr "Configure modeling tools, taxonomy integration, frontend embedding, and system options."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "All Diagrams"
+msgstr "All Diagrams"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "New Diagram"
+msgstr "New Diagram"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Taxonomies & Structure"
+msgstr "Taxonomies & Structure"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Modeler & Studio Tools"
+msgstr "Modeler & Studio Tools"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Frontend & Embedding"
+msgstr "Frontend & Embedding"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "System Status & Shortcode"
+msgstr "System Status & Shortcode"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "WordPress Taxonomies & Organization"
+msgstr "WordPress Taxonomies & Organization"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Control whether standard WordPress categories and tags are enabled for organizing BPMN diagrams."
+msgstr "Control whether standard WordPress categories and tags are enabled for organizing BPMN diagrams."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Standard WordPress Categories"
+msgstr "Standard WordPress Categories"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Recommended"
+msgstr "Recommended"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Enable standard WordPress categories (category) for BPMN diagrams. Adds the category metabox, filter dropdowns, and category columns in the diagram list table."
+msgstr "Enable standard WordPress categories (category) for BPMN diagrams. Adds the category metabox, filter dropdowns, and category columns in the diagram list table."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Standard WordPress Tags (Schlagwörter)"
+msgstr "Standard WordPress Tags (Schlagwörter)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Enable standard WordPress tags (post_tag) for granular labeling, searchability, and keyword filtering of your BPMN processes."
+msgstr "Enable standard WordPress tags (post_tag) for granular labeling, searchability, and keyword filtering of your BPMN processes."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Revision History & Version Comparison"
+msgstr "Revision History & Version Comparison"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Pro Feature"
+msgstr "Pro Feature"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Tracks diagram version history on every save. Enables the \"History\" studio button with visual semantic comparison (added, modified, deleted BPMN elements) and one-click rollback."
+msgstr "Tracks diagram version history on every save. Enables the \"History\" studio button with visual semantic comparison (added, modified, deleted BPMN elements) and one-click rollback."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "BPMN Studio & Modeler Modules"
+msgstr "BPMN Studio & Modeler Modules"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Turn editor features on or off depending on your team workflow and performance preferences."
+msgstr "Turn editor features on or off depending on your team workflow and performance preferences."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Interactive Token Simulation"
+msgstr "Interactive Token Simulation"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Provides dynamic token playback in the editor with play/pause, step controls, and speed regulator to test process flow logic interactively."
+msgstr "Provides dynamic token playback in the editor with play/pause, step controls, and speed regulator to test process flow logic interactively."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Minimap Navigation"
+msgstr "Minimap Navigation"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Shows a high-level mini-overview map in the top-right corner of the canvas with a collapsible toggle button for fast navigation across large workflows."
+msgstr "Shows a high-level mini-overview map in the top-right corner of the canvas with a collapsible toggle button for fast navigation across large workflows."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Real-time BPMN 2.0 Linter"
+msgstr "Real-time BPMN 2.0 Linter"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Validates diagrams in real time against BPMN 2.0 best practices (unconnected elements, missing end events, invalid flows) and displays unobtrusive guidance."
+msgstr "Validates diagrams in real time against BPMN 2.0 best practices (unconnected elements, missing end events, invalid flows) and displays unobtrusive guidance."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Camunda Properties Panel"
+msgstr "Camunda Properties Panel"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Enables the collapsible right sidebar in the editor to inspect and configure element IDs, names, documentation, and technical execution properties."
+msgstr "Enables the collapsible right sidebar in the editor to inspect and configure element IDs, names, documentation, and technical execution properties."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Default Template Language"
+msgstr "Default Template Language"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Choose the default language for process templates and the interactive guide. The user can also change this directly in the template modal."
+msgstr "Choose the default language for process templates and the interactive guide. The user can also change this directly in the template modal."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "🌐 Automatic (WordPress Site Language)"
+msgstr "🌐 Automatic (WordPress Site Language)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Frontend Display & Viewer Experience"
+msgstr "Frontend Display & Viewer Experience"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Configure how diagrams appear when rendered via shortcodes [bpmnm id=\"...\"] or embedded in posts and pages."
+msgstr "Configure how diagrams appear when rendered via shortcodes [bpmnm id=\"...\"] or embedded in posts and pages."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Default Viewer Height (px)"
+msgstr "Default Viewer Height (px)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "The default canvas height in pixels when no height attribute is passed to the shortcode (e.g., 600). Can always be overridden with [bpmnm height=\"750px\"]."
+msgstr "The default canvas height in pixels when no height attribute is passed to the shortcode (e.g., 600). Can always be overridden with [bpmnm height=\"750px\"]."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Enable Zoom & Pan in Frontend"
+msgstr "Enable Zoom & Pan in Frontend"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Allows website visitors to zoom in/out with mouse scroll or touch gestures and freely pan the diagram viewport."
+msgstr "Allows website visitors to zoom in/out with mouse scroll or touch gestures and freely pan the diagram viewport."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Allow Visitors to Download BPMN & SVG"
+msgstr "Allow Visitors to Download BPMN & SVG"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Displays download buttons in the frontend viewer bar so users can export the raw BPMN 2.0 XML or SVG vector image."
+msgstr "Displays download buttons in the frontend viewer bar so users can export the raw BPMN 2.0 XML or SVG vector image."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Interactive Token Simulation in Frontend"
+msgstr "Interactive Token Simulation in Frontend"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Allows visitors to run the interactive token simulation directly inside embedded diagrams on your site."
+msgstr "Allows visitors to run the interactive token simulation directly inside embedded diagrams on your site."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "System & Library Status"
+msgstr "System & Library Status"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Technical details and library versions powering your BPMN engine."
+msgstr "Technical details and library versions powering your BPMN engine."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Plugin Version"
+msgstr "Plugin Version"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "BPMN Modeler Engine"
+msgstr "BPMN Modeler Engine"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Token Simulation Module"
+msgstr "Token Simulation Module"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "BPMN Lint Validator"
+msgstr "BPMN Lint Validator"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "REST API Endpoint"
+msgstr "REST API Endpoint"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Active"
+msgstr "Active"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "WordPress Core"
+msgstr "WordPress Core"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "PHP Environment"
+msgstr "PHP Environment"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Shortcode Quick Reference"
+msgstr "Shortcode Quick Reference"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Copy & paste shortcodes to integrate your diagrams anywhere in WordPress."
+msgstr "Copy & paste shortcodes to integrate your diagrams anywhere in WordPress."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Standard Interactive Diagram"
+msgstr "Standard Interactive Diagram"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Custom Height & Fullscreen Disabled"
+msgstr "Custom Height & Fullscreen Disabled"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Lightweight Static SVG Mode (Instant Load)"
+msgstr "Lightweight Static SVG Mode (Instant Load)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Active & Completed Step Highlighting"
+msgstr "Active & Completed Step Highlighting"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Save All Changes"
+msgstr "Save All Changes"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Invalid diagram ID."
+msgstr "ID diagramă nevalid."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Permission denied."
+msgstr "Acces interzis."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Categories"
+msgstr "Categories"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Tags"
+msgstr "Tags"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Export BPMN"
+msgstr "Export BPMN"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "View in Frontend"
+msgstr "Vezi pe site"
+
+#: includes/class-ha-bpmn-renderer.php
+msgid "Please select a BPMN diagram in the block sidebar."
+msgstr "Vă rugăm să selectați o diagramă BPMN în bara laterală a blocului."
+
+#: includes/class-ha-bpmn-renderer.php
+msgid "Search diagram"
+msgstr "Caută diagramă"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Embed an interactive or static BPMN 2.0 process diagram with simulation and step tracking."
+msgstr "Încorporați o diagramă de proces BPMN 2.0 interactivă sau statică cu simulare și urmărire a pașilor."
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Select BPMN Diagram"
+msgstr "Selectați diagrama BPMN"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "-- Choose a diagram --"
+msgstr "-- Alegeți o diagramă --"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Display Settings"
+msgstr "Setări afișare"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Height (e.g. 600px)"
+msgstr "Înălțime (ex. 600px)"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Display Mode"
+msgstr "Mod afișare"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Interactive (Full Modeler with Zoom & Simulation)"
+msgstr "Interactiv (Modelator complet cu zoom și simulare)"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Static SVG (Zero-JS, Ultra-fast)"
+msgstr "SVG static (Fără JS, ultra-rapid)"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Enable Fullscreen Button"
+msgstr "Activează buton ecran complet"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Enable Live Search"
+msgstr "Activează căutare live"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Enable Task Details Drawer"
+msgstr "Activează panoul de detalii sarcini"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Process Step Tracking"
+msgstr "Urmărirea pașilor procesului"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Active Step IDs (comma-separated)"
+msgstr "ID-uri pași activi (separate prin virgulă)"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Completed Step IDs (comma-separated)"
+msgstr "ID-uri pași finalizați (separate prin virgulă)"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "No BPMN diagrams found. Please create one first."
+msgstr "Nu s-au găsit diagrame BPMN. Creați una mai întâi."
+

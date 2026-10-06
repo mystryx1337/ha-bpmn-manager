@@ -1,0 +1,1291 @@
+/**
+ * HA-BPMN-Manager: Admin Styles
+ *
+ * @package HA_BPMN_Manager
+ */
+
+.ha-bpmn-editor-wrap {
+    background: #ffffff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 15px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.ha-bpmn-canvas-parent {
+    width: 100%;
+    height: 750px;
+    min-height: 600px;
+    position: relative;
+    border: 1px solid #e2e4e7;
+    background-color: #fafafa;
+    display: flex;
+    overflow: hidden;
+}
+
+.ha-bpmn-canvas-parent .ha-bpmn-canvas {
+    flex: 1 1 auto;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.ha-bpmn-canvas-parent .ha-bpmn-canvas > .djs-container > svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Protect minimap SVGs from global styles */
+.djs-minimap svg {
+    min-height: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: content-box !important;
+}
+
+.djs-minimap .map {
+    overflow: hidden !important;
+}
+
+/* Properties Panel layout */
+.ha-bpmn-properties-panel-wrap {
+    width: 320px;
+    min-width: 260px;
+    max-width: 500px;
+    border-left: 1px solid #dcdcde;
+    background-color: #f6f7f7;
+    overflow-y: auto;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    transition: width 0.15s ease;
+}
+
+.ha-bpmn-properties-panel-wrap.collapsed {
+    width: 0 !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    border-left: none !important;
+    overflow: hidden !important;
+}
+
+.ha-bpmn-properties-toggle-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 20;
+    cursor: pointer;
+    background: #ffffff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.ha-bpmn-properties-toggle-btn:hover {
+    background: #f0f0f1;
+}
+
+/* Lane styling */
+[data-element-id^="Lane_"] > .djs-visual > rect {
+    stroke: #b0b4b9 !important;
+}
+
+/* Status Badges for Post Table */
+.bpmn-status {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-draft { background: #f0f0f1; color: #646970; }
+.status-review { background: #fcf9e8; color: #b25900; }
+.status-approved { background: #edfaef; color: #008a20; }
+.status-archived { background: #fcebeb; color: #d63638; }
+
+/* Floating Studio Toolbar */
+.ha-bpmn-controls-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    margin-bottom: 12px;
+    gap: 8px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.ha-bpmn-controls-bar .btn-group {
+    display: inline-flex;
+    gap: 3px;
+    align-items: center;
+    background: #f8fafc;
+    padding: 3px 4px;
+    border-radius: 6px;
+    border: 1px solid #f1f5f9;
+}
+
+.ha-bpmn-controls-bar .btn-group button,
+.ha-bpmn-controls-bar .btn-group .button {
+    all: unset !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    height: 28px !important;
+    min-height: 28px !important;
+    padding: 0 8px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    color: #475569 !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    box-sizing: border-box !important;
+    transition: all 0.15s ease !important;
+}
+
+.ha-bpmn-controls-bar .btn-group button:hover,
+.ha-bpmn-controls-bar .btn-group .button:hover {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+.ha-bpmn-controls-bar .btn-group button:active,
+.ha-bpmn-controls-bar .btn-group .button:active {
+    background: #e2e8f0 !important;
+}
+
+.ha-bpmn-controls-bar .btn-group button:disabled,
+.ha-bpmn-controls-bar .btn-group button.disabled {
+    opacity: 0.35 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    box-shadow: none !important;
+}
+
+.ha-bpmn-controls-bar .btn-group button svg {
+    display: block !important;
+    width: 14px !important;
+    height: 14px !important;
+    stroke: currentColor !important;
+}
+
+.ha-bpmn-controls-bar .ha-btn-toggle-properties.active {
+    background: #3b82f6 !important;
+    color: #ffffff !important;
+}
+
+/* BPMN-Quest Highlighted Button in Studio Toolbar */
+.ha-bpmn-controls-bar .btn-group button.ha-btn-quest,
+.ha-bpmn-controls-bar .btn-group .ha-btn-quest {
+    background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%) !important;
+    color: #4338ca !important;
+    border: 1px solid #c7d2fe !important;
+    font-weight: 600 !important;
+    padding: 0 10px !important;
+    gap: 6px !important;
+    box-shadow: 0 1px 3px rgba(79, 70, 229, 0.12) !important;
+    position: relative;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.ha-bpmn-controls-bar .btn-group button.ha-btn-quest:hover,
+.ha-bpmn-controls-bar .btn-group .ha-btn-quest:hover {
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%) !important;
+    color: #312e81 !important;
+    border-color: #818cf8 !important;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25) !important;
+    transform: translateY(-1px) !important;
+}
+
+.ha-bpmn-controls-bar .btn-group button.ha-btn-quest:active,
+.ha-bpmn-controls-bar .btn-group .ha-btn-quest:active {
+    transform: translateY(0) !important;
+    background: #c7d2fe !important;
+}
+
+.ha-bpmn-controls-bar .btn-group button.ha-btn-quest svg {
+    stroke: #4f46e5 !important;
+    color: #4f46e5 !important;
+    transition: stroke 0.2s ease;
+}
+
+.ha-bpmn-controls-bar .btn-group button.ha-btn-quest:hover svg {
+    stroke: #3730a3 !important;
+    color: #3730a3 !important;
+}
+
+.ha-bpmn-controls-bar .btn-group button.ha-btn-quest .ha-quest-tag {
+    display: inline-flex;
+    align-items: center;
+    background: #4f46e5;
+    color: #ffffff;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 6px;
+    border-radius: 8px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 2px rgba(79, 70, 229, 0.3);
+}
+
+.ha-bpmn-controls-bar .btn-group button.ha-btn-quest:hover .ha-quest-tag {
+    background: #3730a3;
+}
+
+/* Subtle Language Selector in Studio Toolbar */
+.ha-bpmn-controls-bar .ha-lang-controls {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 2px;
+}
+
+.ha-bpmn-controls-bar .ha-select-user-lang {
+    font-size: 11px !important;
+    height: 28px !important;
+    line-height: 28px !important;
+    padding: 0 18px 0 6px !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 4px !important;
+    background: #f9fafb !important;
+    color: #4b5563 !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+    outline: none !important;
+}
+
+.ha-bpmn-controls-bar .ha-select-user-lang:hover {
+    border-color: #9ca3af !important;
+    background: #ffffff !important;
+    color: #1f2937 !important;
+}
+
+.ha-bpmn-controls-bar .ha-select-user-lang:focus {
+    border-color: #6366f1 !important;
+    box-shadow: 0 0 0 1px #6366f1 !important;
+}
+
+/* Admin Fullscreen / Zen Mode */
+body.ha-bpmn-zen-mode #adminmenumain,
+body.ha-bpmn-zen-mode #wpadminbar,
+body.ha-bpmn-zen-mode #screen-meta,
+body.ha-bpmn-zen-mode #screen-meta-links,
+body.ha-bpmn-zen-mode #wpfooter,
+body.ha-bpmn-zen-mode #postbox-container-1,
+body.ha-bpmn-zen-mode #titlediv {
+    display: none !important;
+}
+
+body.ha-bpmn-zen-mode #wpcontent,
+body.ha-bpmn-zen-mode #wpbody,
+body.ha-bpmn-zen-mode #wpbody-content {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.ha-bpmn-editor-wrap.fullscreen-zen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 99999 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    padding: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+}
+
+.ha-bpmn-editor-wrap.fullscreen-zen .ha-bpmn-canvas-parent {
+    flex: 1 1 auto !important;
+    height: 100% !important;
+    min-height: 0 !important;
+}
+
+/* Drag and Drop Overlay inside canvas */
+.ha-bpmn-drop-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 132, 199, 0.12);
+    backdrop-filter: blur(3px);
+    border: 3px dashed #0284c7;
+    border-radius: 8px;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    box-sizing: border-box;
+    animation: haDropPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes haDropPulse {
+    0%, 100% { background: rgba(2, 132, 199, 0.10); border-color: #0284c7; }
+    50% { background: rgba(2, 132, 199, 0.20); border-color: #0369a1; }
+}
+
+.ha-bpmn-drop-content {
+    background: #ffffff;
+    padding: 24px 36px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(2, 132, 199, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.ha-bpmn-drop-content svg {
+    color: #0284c7;
+    margin-bottom: 4px;
+}
+
+.ha-bpmn-drop-content h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.ha-bpmn-drop-content p {
+    margin: 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.ha-bpmn-canvas-parent.drag-active .ha-bpmn-drop-overlay {
+    display: flex;
+}
+
+/* Fix WordPress sidebar Publish metabox: align 'Entwurf speichern' and 'Vorschau anzeigen' side by side */
+.post-type-bpmnm #minor-publishing-actions,
+#minor-publishing-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 10px 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    float: none !important;
+    clear: both !important;
+}
+
+.post-type-bpmnm #minor-publishing-actions::before,
+.post-type-bpmnm #minor-publishing-actions::after,
+#minor-publishing-actions::before,
+#minor-publishing-actions::after,
+.post-type-bpmnm #minor-publishing-actions .clear,
+#minor-publishing-actions .clear {
+    display: none !important;
+}
+
+.post-type-bpmnm #minor-publishing-actions #save-action,
+.post-type-bpmnm #minor-publishing-actions .preview-action,
+.post-type-bpmnm #minor-publishing-actions #preview-action,
+#minor-publishing-actions #save-action,
+#minor-publishing-actions .preview-action,
+#minor-publishing-actions #preview-action {
+    float: none !important;
+    flex: 1 1 50% !important;
+    width: 50% !important;
+    min-width: 0 !important;
+    max-width: 50% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+}
+
+.post-type-bpmnm #minor-publishing-actions #save-action .button,
+.post-type-bpmnm #minor-publishing-actions .preview-action .button,
+.post-type-bpmnm #minor-publishing-actions #preview-action .button,
+#minor-publishing-actions #save-action .button,
+#minor-publishing-actions .preview-action .button,
+#minor-publishing-actions #preview-action .button,
+#minor-publishing-actions #save-post,
+#minor-publishing-actions #post-preview {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 32px !important;
+    min-height: 32px !important;
+    max-height: 32px !important;
+    line-height: 30px !important;
+    margin: 0 !important;
+    padding: 0 8px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    box-sizing: border-box !important;
+    vertical-align: middle !important;
+    float: none !important;
+    border-radius: 4px !important;
+}
+
+.post-type-bpmnm #minor-publishing-actions #save-action .spinner,
+#minor-publishing-actions #save-action .spinner {
+    position: absolute !important;
+    right: 4px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin: 0 !important;
+    float: none !important;
+    z-index: 5 !important;
+}
+
+/* Ensure Author metabox in sidebar fits cleanly without overflowing */
+.post-type-bpmnm #authordiv .inside select,
+#authordiv .inside select {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* ==========================================================================
+   Modals (Templates & Revisions)
+   ========================================================================== */
+.ha-bpmn-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ha-bpmn-modal-dialog {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: haModalIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes haModalIn {
+    from { opacity: 0; transform: scale(0.96) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.ha-bpmn-modal-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+}
+
+.ha-bpmn-modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.ha-bpmn-modal-close {
+    all: unset;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    color: #94a3b8;
+    padding: 4px;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+}
+
+.ha-bpmn-modal-close:hover {
+    color: #0f172a;
+    background: #e2e8f0;
+}
+
+.ha-bpmn-modal-body {
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.ha-bpmn-modal-intro {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* Template Cards Grid */
+.ha-template-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
+}
+
+.ha-template-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.ha-template-card:hover {
+    border-color: #0284c7;
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.1);
+    transform: translateY(-2px);
+}
+
+.ha-template-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ha-template-icon {
+    font-size: 24px;
+}
+
+.ha-template-card-featured {
+    border-color: #0284c7;
+    background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 70px);
+    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.08);
+}
+
+.ha-template-tags {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ha-template-badge {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #0284c7;
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+}
+
+.ha-template-category {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #64748b;
+    background: #f1f5f9;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.ha-template-title {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.ha-template-desc {
+    font-size: 13px;
+    color: #475569;
+    margin: 0 0 16px 0;
+    flex: 1 1 auto;
+    line-height: 1.45;
+}
+
+.ha-btn-load-template {
+    width: 100%;
+    text-align: center;
+}
+
+/* Revisions & Semantic Diff Modal */
+.ha-revisions-dialog {
+    width: 900px;
+}
+
+.ha-revisions-content {
+    display: flex;
+    gap: 24px;
+    min-height: 380px;
+}
+
+.ha-revisions-list-col {
+    width: 35%;
+    border-right: 1px solid #e2e8f0;
+    padding-right: 20px;
+}
+
+.ha-revisions-diff-col {
+    width: 65%;
+}
+
+.ha-revisions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.ha-revision-item {
+    padding: 10px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.ha-revision-item:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+.ha-revision-item.active {
+    background: #f0f9ff;
+    border-color: #0284c7;
+}
+
+.ha-rev-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #0f172a;
+}
+
+.ha-rev-meta {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+.ha-diff-stats {
+    display: flex;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.stat-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.stat-badge.added { background: #dcfce7; color: #15803d; }
+.stat-badge.changed { background: #e0f2fe; color: #0369a1; }
+.stat-badge.removed { background: #fee2e2; color: #b91c1c; }
+
+.ha-diff-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 220px;
+    overflow-y: auto;
+    font-size: 13px;
+}
+
+.ha-diff-list li {
+    padding: 6px 8px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ha-diff-list .badge {
+    font-weight: bold;
+    width: 18px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.ha-diff-list .diff-added { background: #f0fdf4; color: #166534; }
+.ha-diff-list .diff-changed { background: #f0f9ff; color: #075985; }
+.ha-diff-list .diff-removed { background: #fef2f2; color: #991b1b; }
+
+/* Auto-Layout loading button animation */
+.ha-btn-autolayout.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.ha-btn-autolayout.loading svg {
+    animation: haSpin 1s linear infinite;
+}
+
+@keyframes haSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ==========================================================================
+   Gutenberg Block Editor Preview
+   ========================================================================== */
+.ha-bpmn-gutenberg-preview-wrap {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.ha-bpmn-preview-placeholder {
+    text-align: center;
+    padding: 30px;
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 8px;
+}
+
+.ha-bpmn-preview-placeholder .placeholder-icon {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.ha-bpmn-preview-placeholder h3 {
+    margin: 0 0 6px 0;
+    font-size: 18px;
+    color: #0f172a;
+}
+
+.ha-bpmn-preview-placeholder p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.ha-bpmn-preview-card {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.ha-preview-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.ha-preview-badge {
+    background: #0284c7;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.ha-preview-dim {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.ha-preview-title {
+    margin: 0 0 4px 0;
+    font-size: 17px;
+    color: #0f172a;
+}
+
+.ha-preview-info {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0 0 8px 0;
+}
+
+.ha-preview-tracking {
+    font-size: 12px;
+    color: #0369a1;
+    background: #e0f2fe;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.ha-preview-note {
+    font-size: 12px;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+
+/* ==========================================================================
+   Modern Settings Dashboard
+   ========================================================================== */
+.ha-settings-dashboard {
+    max-width: 1100px;
+    margin: 20px 20px 40px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.ha-settings-header {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 24px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    margin-bottom: 20px;
+}
+
+.ha-header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.ha-header-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #2271b1 0%, #135e96 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(34, 113, 177, 0.25);
+}
+
+.ha-header-icon .dashicons {
+    font-size: 26px;
+    width: 26px;
+    height: 26px;
+}
+
+.ha-header-title {
+    margin: 0 0 4px 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ha-version-tag {
+    font-size: 12px;
+    font-weight: 600;
+    background: #f1f5f9;
+    color: #475569;
+    padding: 2px 8px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.ha-header-desc {
+    margin: 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.ha-header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.ha-header-actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 36px;
+    line-height: 34px;
+    padding: 0 14px;
+    font-size: 13px;
+}
+
+.ha-header-actions .button .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+}
+
+/* Tab Navigation */
+.ha-settings-tabs {
+    display: flex;
+    gap: 4px;
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: 24px;
+    background: transparent;
+}
+
+.ha-tab-btn {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.2s ease;
+    border-radius: 6px 6px 0 0;
+}
+
+.ha-tab-btn .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    color: #94a3b8;
+    transition: color 0.2s ease;
+}
+
+.ha-tab-btn:hover {
+    color: #1e293b;
+    background: #f8fafc;
+}
+
+.ha-tab-btn:hover .dashicons {
+    color: #475569;
+}
+
+.ha-tab-btn.active {
+    color: #2271b1;
+    font-weight: 600;
+    border-bottom-color: #2271b1;
+    background: #ffffff;
+}
+
+.ha-tab-btn.active .dashicons {
+    color: #2271b1;
+}
+
+/* Tab Panels */
+.ha-tab-content {
+    display: none;
+}
+
+.ha-tab-content.active {
+    display: block;
+    animation: haFadeIn 0.2s ease-in-out;
+}
+
+@keyframes haFadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Modern Card */
+.ha-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.ha-card-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #f1f5f9;
+    background: #f8fafc;
+}
+
+.ha-card-header h2 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.ha-card-header p {
+    margin: 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.ha-card-body {
+    padding: 10px 24px;
+}
+
+/* Setting Rows */
+.ha-setting-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #f1f5f9;
+    gap: 24px;
+}
+
+.ha-setting-row:last-child {
+    border-bottom: none;
+}
+
+.ha-setting-info {
+    flex: 1 1 auto;
+}
+
+.ha-setting-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.ha-setting-desc {
+    margin: 0;
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.ha-setting-control {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* iOS Toggle Switch */
+.ha-switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.ha-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.ha-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cbd5e1;
+    transition: 0.25s;
+    border-radius: 26px;
+}
+
+.ha-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #ffffff;
+    transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.ha-switch input:checked + .ha-slider {
+    background-color: #2271b1;
+}
+
+.ha-switch input:focus + .ha-slider {
+    box-shadow: 0 0 0 2px #93c5fd;
+}
+
+.ha-switch input:checked + .ha-slider:before {
+    transform: translateX(20px);
+}
+
+/* Badges */
+.ha-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+    line-height: 1.3;
+}
+
+.ha-badge-recommended {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+
+.ha-badge-feature {
+    background: #faf5ff;
+    color: #7e22ce;
+    border: 1px solid #e9d5ff;
+}
+
+.ha-badge-success {
+    background: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+/* System Grid */
+.ha-grid-2col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 20px;
+}
+
+.ha-status-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ha-status-table tr {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.ha-status-table tr:last-child {
+    border-bottom: none;
+}
+
+.ha-status-table th {
+    text-align: left;
+    padding: 12px 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #475569;
+    width: 45%;
+}
+
+.ha-status-table td {
+    padding: 12px 8px;
+    font-size: 13px;
+    color: #1e293b;
+}
+
+.ha-shortcode-example {
+    margin-bottom: 16px;
+}
+
+.ha-shortcode-example:last-child {
+    margin-bottom: 0;
+}
+
+.ha-shortcode-example h4 {
+    margin: 0 0 6px 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.ha-code-block {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+.ha-code-block code {
+    background: transparent !important;
+    padding: 0 !important;
+    color: #0f172a;
+    font-size: 12px;
+    font-family: Consolas, Monaco, "Courier New", Courier, monospace;
+}
+
+/* Settings Footer */
+.ha-settings-footer {
+    padding: 16px 0;
+}
+
+.ha-settings-footer .button-primary.large {
+    height: 42px;
+    line-height: 40px;
+    padding: 0 24px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+/* Template Language Bar in Modal */
+.ha-template-lang-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+.ha-template-lang-bar label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ha-template-lang-bar select {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 13px;
+    background-color: #ffffff;
+    color: #1e293b;
+    outline: none;
+    cursor: pointer;
+}
+
+.ha-template-lang-bar select:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+}

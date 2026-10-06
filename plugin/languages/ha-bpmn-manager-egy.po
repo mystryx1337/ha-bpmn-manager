@@ -1,0 +1,726 @@
+# Translation of HA-BPMN-Manager into Ancient Egyptian (Hieroglyphs 𓂀𓃭𓇳)
+# Copyright (C) 2020-present Alexander Hacker
+msgid ""
+msgstr ""
+"Project-Id-Version: HA-BPMN-Manager 2.5.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ha-bpmn-manager\n"
+"POT-Creation-Date: 2026-09-12 03:00+0000\n"
+"PO-Revision-Date: 2026-09-12 03:00+0000\n"
+"Last-Translator: Alexander Hacker <alex@seo-hacker.de>\n"
+"Language-Team: Ancient Egyptian (Hieroglyphs 𓂀𓃭𓇳)\n"
+"Language: egy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: HA-BPMN-Manager i18n Toolkit\n"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-renderer.php
+msgid "Zoom in"
+msgstr "𓎛𓂝𓏤 (Vergrößern)"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-renderer.php
+msgid "Zoom out"
+msgstr "𓂝𓃀𓅱 (Verkleinern)"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-renderer.php
+msgid "Fit to screen"
+msgstr "𓉐 𓊹 (Anpassen)"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-renderer.php
+msgid "Download SVG"
+msgstr "SVG 𓎛 (SVG laden)"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-renderer.php
+msgid "Download BPMN"
+msgstr "BPMN 𓎛 (BPMN laden)"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-renderer.php
+msgid "Fullscreen"
+msgstr "𓉐𓉻 (Vollbild)"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "You have unsaved changes in your BPMN diagram. Do you really want to leave?"
+msgstr "Ungespeicherte Hieroglyphen in der Papyrusrolle!"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Drop BPMN file here to import"
+msgstr "Papyrusrolle hier ablegen"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Release to import .bpmn or .xml directly into diagram"
+msgstr "Loslassen zum Einlesen der Hieroglyphen"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Import"
+msgstr "𓋴𓏏 (Einlesen)"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Failed to import BPMN diagram."
+msgstr "Papyrusrolle konnte nicht entziffert werden."
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Diagram imported successfully."
+msgstr "Hieroglyphen erfolgreich eingemeißelt!"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "The selected file is not a valid BPMN 2.0 XML document."
+msgstr "Kein gültiges BPMN 2.0 Papyrusdokument!"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Invalid file format. Please upload a .bpmn or .xml file."
+msgstr "Ungültiges Format (.bpmn/.xml)"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Error reading the file."
+msgstr "Fehler beim Lesen der Papyrusrolle."
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Auto-Layout"
+msgstr "𓅓𓂝𓏏 (Ausrichten)"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Error during automatic layout calculation."
+msgstr "Fehler bei der Berechnung der Tempelordnung."
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Templates"
+msgstr "𓊹𓏏 (Vorlagen)"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Select Process Template"
+msgstr "Papyrus-Vorlage wählen"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Choose a ready-made template as a starting point for your BPMN 2.0 process:"
+msgstr "Wähle eine heilige Papyrusrolle als Ausgangspunkt:"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Use template"
+msgstr "Papyrusrolle verwenden"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Unsaved changes will be lost. Do you really want to proceed?"
+msgstr "Ungespeicherte Inschriften gehen verloren. Fortfahren?"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Revision History"
+msgstr "Chronik des Pharao"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Loading revisions..."
+msgstr "Lade Königsannalen..."
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Restore"
+msgstr "Wiederherstellen"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Compare"
+msgstr "Papyrusrollen vergleichen"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Added"
+msgstr "Eingemeißelt"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Modified"
+msgstr "Korrigiert"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Deleted"
+msgstr "Ausgelöscht"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "No structural changes detected between these versions."
+msgstr "Keine Änderung in den Königsannalen."
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Do you really want to restore this revision? Current unsaved changes will be overwritten."
+msgstr "Diese Papyrusrolle wiederherstellen?"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "QM Handbook"
+msgstr "Papyrus der Weisheit"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Process Documentation & QM Handbook"
+msgstr "Tempeldokumentation & Handbuch"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Process Steps Overview"
+msgstr "Kette der Hieroglyphen"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Step"
+msgstr "Schritt"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Name / Action"
+msgstr "Name / Ritus"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Print Handbook"
+msgstr "Papyrus drucken"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Search"
+msgstr "Suchen"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Search diagram..."
+msgstr "Hieroglyphen suchen..."
+
+#: includes/class-ha-bpmn-assets.php
+msgid "No matches found"
+msgstr "Keine Hieroglyphe gefunden"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Previous match"
+msgstr "Vorige Inschrift"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Next match"
+msgstr "Nächste Inschrift"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Close search"
+msgstr "Suche schließen"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Process Step Details"
+msgstr "Inschrift-Details"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Step Type"
+msgstr "Ritus-Art"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Assigned Role / Lane"
+msgstr "Priester / Tempel"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "QM Instructions & Documentation"
+msgstr "Tempel-Gebote"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "No additional instructions provided for this step."
+msgstr "Keine weiteren Riten für diesen Schritt."
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Technical ID"
+msgstr "Hieroglyphen-ID"
+
+#: includes/class-ha-bpmn-assets.php
+msgid "Close"
+msgstr "Schließen"
+
+#: includes/class-ha-bpmn-assets.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Properties"
+msgstr "Eigenschaften"
+
+#: includes/class-ha-bpmn-rest.php
+#: includes/class-ha-bpmn-rest.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Diagram not found."
+msgstr "Papyrusrolle verschollen."
+
+#: includes/class-ha-bpmn-rest.php
+msgid "This diagram is password protected."
+msgstr "Mit Anubis' Siegel geschützt."
+
+#: includes/class-ha-bpmn-rest.php
+msgid "You are not allowed to view this diagram."
+msgstr "Kein Zutritt zur Grabkammer."
+
+#: includes/class-ha-bpmn-rest.php
+msgid "Diagram #%d"
+msgstr "Papyrus #%d"
+
+#: includes/class-ha-bpmn-rest.php
+msgid "You do not have permission to view revisions of this diagram."
+msgstr "You do not have permission to view revisions of this diagram."
+
+#: includes/class-ha-bpmn-rest.php
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "BPMN Diagrams"
+msgstr "Hieroglyphen-Rollen"
+
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "BPMN Diagram"
+msgstr "Hieroglyphen-Rolle"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Add New Diagram"
+msgstr "Neuer Papyrus"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Add New BPMN Diagram"
+msgstr "Neuen Papyrus beschriften"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Edit BPMN Diagram"
+msgstr "Papyrus bearbeiten"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "New BPMN Diagram"
+msgstr "Neuer Papyrus"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "View Diagram"
+msgstr "Papyrus betrachten"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Search Diagrams"
+msgstr "Papyri durchsuchen"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "No diagrams found"
+msgstr "Keine Papyrusrollen vorhanden"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "No diagrams found in Trash"
+msgstr "No diagrams found in Trash"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "All BPMN Diagrams"
+msgstr "Alle Hieroglyphen-Rollen"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "BPMN Modeler"
+msgstr "Schreiberstube"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Author"
+msgstr "Schreiber des Pharao"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Undo (Ctrl+Z)"
+msgstr "Rückgängig (Ctrl+Z)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Undo"
+msgstr "Rückgängig"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Redo (Ctrl+Y)"
+msgstr "Wiederholen (Ctrl+Y)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Redo"
+msgstr "Wiederholen"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Process Templates"
+msgstr "Papyrus-Vorlagen"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Interactive Guide & BPMN-Quest"
+msgstr "Interactive Guide & BPMN-Quest"
+
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "BPMN-Quest"
+msgstr "BPMN-Quest"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Import BPMN XML (.bpmn, .xml)"
+msgstr "Papyrus einlesen"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Auto-Layout Diagram"
+msgstr "Hieroglyphen ordnen"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Search Diagram (Ctrl+F)"
+msgstr "Im Papyrus suchen"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Revision History & Semantic Diff"
+msgstr "Königsannalen & Vergleich"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "History"
+msgstr "Chronik"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Generate QM Process Handbook (Print/PDF)"
+msgstr "Generate QM Process Handbook (Print/PDF)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Fullscreen / Zen Mode"
+msgstr "Vollbild"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Download BPMN XML"
+msgstr "Papyrus-XML laden"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Toggle Properties Panel"
+msgstr "Eigenschaftenleiste"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Drop BPMN file here"
+msgstr "Papyrus hier ablegen"
+
+#: includes/class-ha-bpmn-cpt.php
+#: includes/class-ha-bpmn-cpt.php
+msgid "Settings"
+msgstr "Tempel-Einstellungen"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "HA-BPMN-Manager"
+msgstr "HA-BPMN-Manager"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Configure modeling tools, taxonomy integration, frontend embedding, and system options."
+msgstr "Configure modeling tools, taxonomy integration, frontend embedding, and system options."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "All Diagrams"
+msgstr "Alle Papyri"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "New Diagram"
+msgstr "Neuer Papyrus"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Taxonomies & Structure"
+msgstr "Tempel-Hierarchie"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Modeler & Studio Tools"
+msgstr "Schreiber-Werkzeuge"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Frontend & Embedding"
+msgstr "Sichtbare Papyri"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "System Status & Shortcode"
+msgstr "Pharaonen-Status"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "WordPress Taxonomies & Organization"
+msgstr "WordPress Taxonomies & Organization"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Control whether standard WordPress categories and tags are enabled for organizing BPMN diagrams."
+msgstr "Control whether standard WordPress categories and tags are enabled for organizing BPMN diagrams."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Standard WordPress Categories"
+msgstr "Standard WordPress Categories"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Recommended"
+msgstr "Recommended"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Enable standard WordPress categories (category) for BPMN diagrams. Adds the category metabox, filter dropdowns, and category columns in the diagram list table."
+msgstr "Enable standard WordPress categories (category) for BPMN diagrams. Adds the category metabox, filter dropdowns, and category columns in the diagram list table."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Standard WordPress Tags (Schlagwörter)"
+msgstr "Standard WordPress Tags (Schlagwörter)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Enable standard WordPress tags (post_tag) for granular labeling, searchability, and keyword filtering of your BPMN processes."
+msgstr "Enable standard WordPress tags (post_tag) for granular labeling, searchability, and keyword filtering of your BPMN processes."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Revision History & Version Comparison"
+msgstr "Revision History & Version Comparison"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Pro Feature"
+msgstr "Pro Feature"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Tracks diagram version history on every save. Enables the \"History\" studio button with visual semantic comparison (added, modified, deleted BPMN elements) and one-click rollback."
+msgstr "Tracks diagram version history on every save. Enables the \"History\" studio button with visual semantic comparison (added, modified, deleted BPMN elements) and one-click rollback."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "BPMN Studio & Modeler Modules"
+msgstr "BPMN Studio & Modeler Modules"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Turn editor features on or off depending on your team workflow and performance preferences."
+msgstr "Turn editor features on or off depending on your team workflow and performance preferences."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Interactive Token Simulation"
+msgstr "Interactive Token Simulation"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Provides dynamic token playback in the editor with play/pause, step controls, and speed regulator to test process flow logic interactively."
+msgstr "Provides dynamic token playback in the editor with play/pause, step controls, and speed regulator to test process flow logic interactively."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Minimap Navigation"
+msgstr "Minimap Navigation"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Shows a high-level mini-overview map in the top-right corner of the canvas with a collapsible toggle button for fast navigation across large workflows."
+msgstr "Shows a high-level mini-overview map in the top-right corner of the canvas with a collapsible toggle button for fast navigation across large workflows."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Real-time BPMN 2.0 Linter"
+msgstr "Real-time BPMN 2.0 Linter"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Validates diagrams in real time against BPMN 2.0 best practices (unconnected elements, missing end events, invalid flows) and displays unobtrusive guidance."
+msgstr "Validates diagrams in real time against BPMN 2.0 best practices (unconnected elements, missing end events, invalid flows) and displays unobtrusive guidance."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Camunda Properties Panel"
+msgstr "Camunda Properties Panel"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Enables the collapsible right sidebar in the editor to inspect and configure element IDs, names, documentation, and technical execution properties."
+msgstr "Enables the collapsible right sidebar in the editor to inspect and configure element IDs, names, documentation, and technical execution properties."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Default Template Language"
+msgstr "Default Template Language"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Choose the default language for process templates and the interactive guide. The user can also change this directly in the template modal."
+msgstr "Choose the default language for process templates and the interactive guide. The user can also change this directly in the template modal."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "🌐 Automatic (WordPress Site Language)"
+msgstr "🌐 Automatic (WordPress Site Language)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Frontend Display & Viewer Experience"
+msgstr "Frontend Display & Viewer Experience"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Configure how diagrams appear when rendered via shortcodes [bpmnm id=\"...\"] or embedded in posts and pages."
+msgstr "Configure how diagrams appear when rendered via shortcodes [bpmnm id=\"...\"] or embedded in posts and pages."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Default Viewer Height (px)"
+msgstr "Default Viewer Height (px)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "The default canvas height in pixels when no height attribute is passed to the shortcode (e.g., 600). Can always be overridden with [bpmnm height=\"750px\"]."
+msgstr "The default canvas height in pixels when no height attribute is passed to the shortcode (e.g., 600). Can always be overridden with [bpmnm height=\"750px\"]."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Enable Zoom & Pan in Frontend"
+msgstr "Enable Zoom & Pan in Frontend"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Allows website visitors to zoom in/out with mouse scroll or touch gestures and freely pan the diagram viewport."
+msgstr "Allows website visitors to zoom in/out with mouse scroll or touch gestures and freely pan the diagram viewport."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Allow Visitors to Download BPMN & SVG"
+msgstr "Allow Visitors to Download BPMN & SVG"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Displays download buttons in the frontend viewer bar so users can export the raw BPMN 2.0 XML or SVG vector image."
+msgstr "Displays download buttons in the frontend viewer bar so users can export the raw BPMN 2.0 XML or SVG vector image."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Interactive Token Simulation in Frontend"
+msgstr "Interactive Token Simulation in Frontend"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Allows visitors to run the interactive token simulation directly inside embedded diagrams on your site."
+msgstr "Allows visitors to run the interactive token simulation directly inside embedded diagrams on your site."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "System & Library Status"
+msgstr "System & Library Status"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Technical details and library versions powering your BPMN engine."
+msgstr "Technical details and library versions powering your BPMN engine."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Plugin Version"
+msgstr "Plugin Version"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "BPMN Modeler Engine"
+msgstr "BPMN Modeler Engine"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Token Simulation Module"
+msgstr "Token Simulation Module"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "BPMN Lint Validator"
+msgstr "BPMN Lint Validator"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "REST API Endpoint"
+msgstr "REST API Endpoint"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Active"
+msgstr "Active"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "WordPress Core"
+msgstr "WordPress Core"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "PHP Environment"
+msgstr "PHP Environment"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Shortcode Quick Reference"
+msgstr "Shortcode Quick Reference"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Copy & paste shortcodes to integrate your diagrams anywhere in WordPress."
+msgstr "Copy & paste shortcodes to integrate your diagrams anywhere in WordPress."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Standard Interactive Diagram"
+msgstr "Standard Interactive Diagram"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Custom Height & Fullscreen Disabled"
+msgstr "Custom Height & Fullscreen Disabled"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Lightweight Static SVG Mode (Instant Load)"
+msgstr "Lightweight Static SVG Mode (Instant Load)"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Active & Completed Step Highlighting"
+msgstr "Active & Completed Step Highlighting"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Save All Changes"
+msgstr "In Stein meißeln"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Invalid diagram ID."
+msgstr "Invalid diagram ID."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Permission denied."
+msgstr "Permission denied."
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Categories"
+msgstr "Kategorien"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Tags"
+msgstr "Schlagwörter"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "Export BPMN"
+msgstr "Export BPMN"
+
+#: includes/class-ha-bpmn-cpt.php
+msgid "View in Frontend"
+msgstr "View in Frontend"
+
+#: includes/class-ha-bpmn-renderer.php
+msgid "Please select a BPMN diagram in the block sidebar."
+msgstr "Please select a BPMN diagram in the block sidebar."
+
+#: includes/class-ha-bpmn-renderer.php
+msgid "Search diagram"
+msgstr "Search diagram"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Embed an interactive or static BPMN 2.0 process diagram with simulation and step tracking."
+msgstr "Embed an interactive or static BPMN 2.0 process diagram with simulation and step tracking."
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Select BPMN Diagram"
+msgstr "Select BPMN Diagram"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "-- Choose a diagram --"
+msgstr "-- Choose a diagram --"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Display Settings"
+msgstr "Display Settings"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Height (e.g. 600px)"
+msgstr "Height (e.g. 600px)"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Display Mode"
+msgstr "Display Mode"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Interactive (Full Modeler with Zoom & Simulation)"
+msgstr "Interactive (Full Modeler with Zoom & Simulation)"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Static SVG (Zero-JS, Ultra-fast)"
+msgstr "Static SVG (Zero-JS, Ultra-fast)"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Enable Fullscreen Button"
+msgstr "Enable Fullscreen Button"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Enable Live Search"
+msgstr "Enable Live Search"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Enable Task Details Drawer"
+msgstr "Enable Task Details Drawer"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Process Step Tracking"
+msgstr "Process Step Tracking"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Active Step IDs (comma-separated)"
+msgstr "Active Step IDs (comma-separated)"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "Completed Step IDs (comma-separated)"
+msgstr "Completed Step IDs (comma-separated)"
+
+#: includes/class-ha-bpmn-gutenberg.php
+msgid "No BPMN diagrams found. Please create one first."
+msgstr "No BPMN diagrams found. Please create one first."
+

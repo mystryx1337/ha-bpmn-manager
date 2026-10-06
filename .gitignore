@@ -1,0 +1,20 @@
+﻿# Operating System
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs & temp
+*.log
+*.tmp
+*.bak
+
+# Dependencies
+node_modules/
+app/node_modules/
+
+# Release archives
+release/*.zip

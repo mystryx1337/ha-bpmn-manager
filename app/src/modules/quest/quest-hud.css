@@ -1,0 +1,1124 @@
+/**
+ * HA-BPMN-Manager: Quest HUD & Learning Companion Styles
+ */
+
+/* Main Floating Draggable Container */
+.ha-quest-hud {
+  position: fixed;
+  top: 80px;
+  right: 25px;
+  z-index: 99999;
+  max-width: 380px;
+  width: 90%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  box-sizing: border-box;
+}
+
+.ha-quest-hud.ha-quest-dragging {
+  transition: none !important;
+  user-select: none !important;
+  cursor: grabbing !important;
+}
+
+.ha-quest-drag-handle {
+  cursor: grab;
+  padding: 4px 6px;
+  margin-right: 6px;
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.ha-quest-drag-handle:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #f8fafc;
+}
+
+.ha-quest-dragging .ha-quest-drag-handle {
+  cursor: grabbing;
+  color: #38bdf8;
+}
+
+.ha-quest-hud *,
+.ha-quest-hud *::before,
+.ha-quest-hud *::after {
+  box-sizing: border-box;
+}
+
+/* Minimized Pill Badge */
+.ha-quest-pill {
+  display: none;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #f8fafc;
+  padding: 8px 16px;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+
+.ha-quest-hud-minimized .ha-quest-pill {
+  display: inline-flex;
+}
+
+.ha-quest-hud-minimized .ha-quest-panel {
+  display: none;
+}
+
+.ha-quest-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  border-color: #fbbf24;
+}
+
+.ha-quest-pill-xp {
+  background: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+}
+
+/* Expanded Panel */
+.ha-quest-panel {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.18);
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+}
+
+/* Panel Header */
+.ha-quest-panel-header {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ha-quest-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ha-quest-logo {
+  font-size: 24px;
+}
+
+.ha-quest-app-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #f8fafc;
+}
+
+.ha-quest-xp-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+  font-size: 11px;
+}
+
+.ha-quest-xp-label {
+  color: #fbbf24;
+  font-weight: 700;
+}
+
+.ha-quest-rank-label {
+  color: #94a3b8;
+}
+
+.ha-quest-header-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.ha-quest-btn-icon {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.ha-quest-btn-icon:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* Tab Selector */
+.ha-quest-tabs {
+  display: flex;
+  background: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ha-quest-tab {
+  flex: 1;
+  padding: 9px 8px;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.15s;
+  border-bottom: 2px solid transparent;
+}
+
+.ha-quest-tab.active {
+  color: #0f172a;
+  background: #fff;
+  border-bottom-color: #2563eb;
+}
+
+/* Panel Body */
+.ha-quest-panel-body {
+  padding: 14px 16px;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+/* Chapter Navigation Dots */
+.ha-quest-chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.ha-quest-nav-dot {
+  flex: 1;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.ha-quest-nav-dot:hover {
+  background: #e2e8f0;
+  border-color: #94a3b8;
+}
+
+.ha-quest-nav-dot.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #1d4ed8;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+}
+
+.ha-quest-nav-dot.completed {
+  border-color: #10b981;
+  background: #ecfdf5;
+}
+
+.ha-quest-nav-dot.locked {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+/* Chapter Card */
+.ha-quest-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.ha-quest-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.ha-quest-chapter-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #2563eb;
+  background: #dbeafe;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.ha-quest-progress-pct {
+  font-size: 11px;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.ha-quest-chapter-title {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+/* Mission Box */
+.ha-quest-mission-box {
+  background: #fff;
+  border-left: 3px solid #2563eb;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.ha-quest-mission-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.ha-quest-mission-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.ha-quest-status-pending {
+  font-size: 11px;
+  font-weight: 700;
+  color: #d97706;
+  background: #fef3c7;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.ha-quest-status-done {
+  font-size: 11px;
+  font-weight: 700;
+  color: #059669;
+  background: #d1fae5;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.ha-quest-mission-desc {
+  margin: 0;
+  font-size: 12px;
+  color: #334155;
+  line-height: 1.4;
+}
+
+/* Subtask Checklist */
+.ha-quest-subtasks-wrap {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+.ha-quest-subtasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  border-bottom: 1px dashed #e2e8f0;
+  padding-bottom: 4px;
+}
+
+.ha-quest-subtasks-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 0.3px;
+}
+
+.ha-quest-subtasks-counter {
+  font-size: 10px;
+  font-weight: 700;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 1px 6px;
+  border-radius: 10px;
+}
+
+.ha-quest-subtasks-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ha-quest-subtask-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 11px;
+  color: #334155;
+  line-height: 1.35;
+  padding: 3px 4px;
+  border-radius: 4px;
+  transition: all 0.15s ease-in-out;
+}
+
+.ha-quest-subtask-item:hover {
+  background: #f8fafc;
+}
+
+.ha-quest-subtask-item.is-done {
+  color: #059669;
+  font-weight: 600;
+  background: #f0fdf4;
+}
+
+.ha-quest-subtask-check {
+  font-size: 12px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.ha-quest-subtask-item.is-done .ha-quest-subtask-check {
+  animation: haCheckPop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes haCheckPop {
+  0% { transform: scale(0.6); }
+  100% { transform: scale(1); }
+}
+
+.ha-quest-subtask-text {
+  flex: 1;
+}
+
+/* Tip Box */
+.ha-quest-tip-box {
+  display: flex;
+  gap: 8px;
+  background: #fefce8;
+  border: 1px solid #fef08a;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  color: #854d0e;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.ha-quest-tip-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Card Controls */
+.ha-quest-card-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.ha-quest-card-controls .button {
+  flex: 1;
+  font-size: 11px;
+  padding: 4px 8px;
+  height: 28px;
+  line-height: 26px;
+  text-align: center;
+}
+
+/* Footer Actions */
+.ha-quest-footer-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.ha-quest-footer-actions .button {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 600;
+  height: 32px;
+}
+
+.ha-quest-btn-next.disabled,
+.ha-quest-btn-next:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+  background: #94a3b8 !important;
+  border-color: #94a3b8 !important;
+  color: #f1f5f9 !important;
+  box-shadow: none !important;
+}
+
+.ha-btn-cert-ready {
+  background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+  border-color: #b45309 !important;
+  color: #fff !important;
+  animation: haCertGlow 1.5s infinite alternate;
+}
+
+@keyframes haCertGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(245, 158, 11, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 16px rgba(245, 158, 11, 0.85);
+  }
+}
+
+/* Challenge Cards */
+.ha-quest-challenges-intro p {
+  margin: 0 0 12px 0;
+  font-size: 12px;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.ha-quest-challenge-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  transition: all 0.15s;
+}
+
+.ha-quest-challenge-card:hover {
+  border-color: #94a3b8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.ha-quest-challenge-card.completed {
+  border-color: #86efac;
+  background: #f0fdf4;
+}
+
+.ha-quest-ch-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.ha-quest-ch-badge {
+  font-size: 10px;
+  font-weight: 700;
+  background: #e2e8f0;
+  color: #475569;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.ha-quest-ch-xp {
+  font-size: 11px;
+  font-weight: 700;
+  color: #d97706;
+}
+
+.ha-quest-ch-title {
+  margin: 0 0 4px 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.ha-quest-ch-intro {
+  margin: 0 0 8px 0;
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.35;
+}
+
+.ha-quest-ch-solved {
+  font-size: 12px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+/* Element Spotlight Halo Marker */
+.ha-quest-spotlight:not(.djs-connection) .djs-visual > :nth-child(1) {
+  stroke: #fbbf24 !important;
+  stroke-width: 4px !important;
+  filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.85)) !important;
+  animation: haSpotlightPulse 1s infinite alternate ease-in-out;
+}
+
+@keyframes haSpotlightPulse {
+  0% {
+    stroke: #fbbf24;
+    filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.5));
+  }
+  100% {
+    stroke: #f59e0b;
+    filter: drop-shadow(0 0 16px rgba(245, 158, 11, 0.95));
+  }
+}
+
+/* Linter Status Bar */
+.ha-quest-linter-status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.ha-quest-linter-msg {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Quest Toast Notification (Responsive, progress bar, hover-pause & close button) */
+.ha-quest-toast {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(580px, calc(100% - 32px));
+  max-width: calc(100% - 32px);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #065f46, #047857);
+  color: #ffffff;
+  padding: 12px 16px 0 16px;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.55;
+  box-shadow: 0 10px 30px rgba(4, 120, 87, 0.4), 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  pointer-events: auto;
+  animation: haToastPopCentered 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 99999;
+  box-sizing: border-box;
+  overflow: hidden;
+  user-select: text;
+}
+
+.ha-quest-toast-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding-bottom: 12px;
+}
+
+.ha-quest-toast-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: pre-line;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  text-align: left;
+  font-weight: 500;
+}
+
+.ha-quest-toast-close {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  flex: 0 0 26px;
+  transition: all 0.2s ease;
+  margin-top: -2px;
+  margin-right: -4px;
+}
+
+.ha-quest-toast-close:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  transform: scale(1.12);
+}
+
+.ha-quest-toast-progress-track {
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  margin-right: -16px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.ha-quest-toast-progress-bar {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #34d399, #a7f3d0);
+  transform-origin: left center;
+  animation: haToastProgress linear forwards;
+  animation-duration: var(--toast-duration, 6500ms);
+}
+
+.ha-quest-toast:hover .ha-quest-toast-progress-bar {
+  animation-play-state: paused;
+}
+
+.ha-quest-toast.fade-out {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+@keyframes haToastProgress {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes haToastPopCentered {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.92) translateY(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1) translateY(0);
+  }
+}
+
+/* Certificate Dialog */
+.ha-bpmn-cert-dialog {
+  max-width: 960px !important;
+  width: 95% !important;
+}
+
+.ha-cert-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+}
+
+.ha-cert-buttons-top {
+  display: flex;
+  gap: 8px;
+}
+
+.ha-cert-body {
+  padding: 16px 20px 24px 20px;
+  background: #f1f5f9;
+}
+
+.ha-cert-canvas-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Print Rules for Certificate */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #ha-cert-print-area, #ha-cert-print-area * {
+    visibility: visible;
+  }
+  #ha-cert-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+/* Reset Progress Wrap & Links */
+.ha-quest-reset-wrap {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed #e2e8f0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px 10px;
+}
+
+.ha-quest-btn-link-reload-template,
+.ha-quest-btn-link-reset {
+  background: transparent;
+  border: none;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  line-height: 1.3;
+}
+
+.ha-quest-btn-link-reload-template {
+  color: #475569;
+}
+
+.ha-quest-btn-link-reload-template:hover {
+  color: #2563eb;
+  background: #eff6ff;
+  text-decoration: underline;
+}
+
+.ha-quest-btn-link-reset {
+  color: #94a3b8;
+}
+
+.ha-quest-btn-link-reset:hover {
+  color: #ef4444;
+  background: #fef2f2;
+  text-decoration: underline;
+}
+
+.ha-quest-btn-reset:hover {
+  color: #fbbf24 !important;
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+/* Reset Confirmation Modal */
+.ha-quest-confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: haFadeIn 0.15s ease-out;
+}
+
+.ha-quest-confirm-dialog {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 22px 24px;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  border: 1px solid #e2e8f0;
+  animation: haScaleIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.ha-quest-confirm-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.ha-quest-confirm-icon {
+  font-size: 24px;
+}
+
+.ha-quest-confirm-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.ha-quest-confirm-text {
+  margin: 0 0 20px 0;
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.ha-quest-confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.ha-quest-confirm-actions .button {
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.ha-quest-confirm-actions .button-danger {
+  background: #dc2626;
+  color: #ffffff;
+  border: 1px solid #b91c1c;
+}
+
+.ha-quest-confirm-actions .button-danger:hover {
+  background: #b91c1c;
+  color: #ffffff;
+}
+
+@keyframes haFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes haScaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes haScaleInCentered {
+  from { opacity: 0; transform: translateX(-50%) scale(0.92); }
+  to { opacity: 1; transform: translateX(-50%) scale(1); }
+}
+
+/* Ensure bpmnlint overlays, badges and tooltips remain visible during token simulation */
+.bjs-container.simulation .djs-overlay.bjsl-overlay,
+.bjs-container.simulation .bjsl-overlay,
+.bjs-container.simulation .bjsl-button,
+.bjs-container.simulation .bjsl-dropdown,
+.bjs-container.simulation .bjsl-issues {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  z-index: 1000 !important;
+}
+
+/* Viewport-relative Linter Rule Card (Guaranteed visible in scope) */
+.ha-quest-linter-notification {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999;
+  width: min(540px, calc(100% - 32px));
+  max-width: calc(100% - 32px);
+  background: #ffffff;
+  border: 2px solid #2563eb;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.28);
+  animation: haScaleInCentered 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.ha-quest-linter-card-header {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+.ha-quest-linter-close {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+  transition: color 0.15s;
+}
+
+.ha-quest-linter-close:hover {
+  color: #ffffff;
+}
+
+.ha-quest-linter-card-body {
+  padding: 16px 20px;
+  color: #1e293b;
+}
+
+.ha-quest-linter-intro {
+  background: #f8fafc;
+  border-left: 3px solid #2563eb;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #334155;
+}
+
+.ha-quest-linter-intro-title {
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ha-quest-linter-intro p {
+  margin: 0;
+}
+
+.ha-quest-linter-rules-title {
+  font-weight: 700;
+  font-size: 13px;
+  color: #0f172a;
+  margin: 8px 0 6px 0;
+}
+
+.ha-quest-linter-card-body ul {
+  margin: 0 0 14px 0;
+  padding-left: 20px;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.ha-quest-linter-card-body li {
+  margin-bottom: 8px;
+}
+
+.ha-quest-linter-card-footer {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #065f46;
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* BPMN-Quest Highlighted Button in Studio Toolbar */
+.ha-bpmn-controls-bar .btn-group button.ha-btn-quest,
+.ha-bpmn-controls-bar .btn-group .ha-btn-quest {
+  background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%) !important;
+  color: #4338ca !important;
+  border: 1px solid #c7d2fe !important;
+  font-weight: 600 !important;
+  padding: 0 10px !important;
+  gap: 6px !important;
+  box-shadow: 0 1px 3px rgba(79, 70, 229, 0.12) !important;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.ha-bpmn-controls-bar .btn-group button.ha-btn-quest:hover,
+.ha-bpmn-controls-bar .btn-group .ha-btn-quest:hover {
+  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%) !important;
+  color: #312e81 !important;
+  border-color: #818cf8 !important;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25) !important;
+  transform: translateY(-1px) !important;
+}
+
+.ha-bpmn-controls-bar .btn-group button.ha-btn-quest:active,
+.ha-bpmn-controls-bar .btn-group .ha-btn-quest:active {
+  transform: translateY(0) !important;
+  background: #c7d2fe !important;
+}
+
+.ha-bpmn-controls-bar .btn-group button.ha-btn-quest svg {
+  stroke: #4f46e5 !important;
+  color: #4f46e5 !important;
+  transition: stroke 0.2s ease;
+}
+
+.ha-bpmn-controls-bar .btn-group button.ha-btn-quest:hover svg {
+  stroke: #3730a3 !important;
+  color: #3730a3 !important;
+}
+
+.ha-bpmn-controls-bar .btn-group button.ha-btn-quest .ha-quest-tag {
+  display: inline-flex;
+  align-items: center;
+  background: #4f46e5;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 6px;
+  border-radius: 8px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  box-shadow: 0 1px 2px rgba(79, 70, 229, 0.3);
+}
+
+.ha-bpmn-controls-bar .btn-group button.ha-btn-quest:hover .ha-quest-tag {
+  background: #3730a3;
+}
+
+/* Subtle Language Selector in Studio Toolbar */
+.ha-bpmn-controls-bar .ha-lang-controls {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 2px;
+}
+
+.ha-bpmn-controls-bar .ha-select-user-lang {
+  font-size: 11px !important;
+  height: 28px !important;
+  line-height: 28px !important;
+  padding: 0 18px 0 6px !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 4px !important;
+  background: #f9fafb !important;
+  color: #4b5563 !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  outline: none !important;
+}
+
+.ha-bpmn-controls-bar .ha-select-user-lang:hover {
+  border-color: #9ca3af !important;
+  background: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+.ha-bpmn-controls-bar .ha-select-user-lang:focus {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 1px #6366f1 !important;
+}
+
+

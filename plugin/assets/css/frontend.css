@@ -1,0 +1,424 @@
+/**
+ * HA-BPMN-Manager: Frontend Styles
+ *
+ * @package HA_BPMN_Manager
+ */
+
+.ha-bpmn-viewer-wrap {
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.ha-bpmn-viewer-wrap .ha-bpmn-canvas {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background-color: #fafafa;
+}
+
+.ha-bpmn-viewer-wrap .ha-bpmn-canvas > .djs-container > svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Controls Bar */
+.ha-bpmn-viewer-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #f6f7f7;
+    border-top: 1px solid #e2e4e7;
+}
+
+.ha-bpmn-viewer-controls .btn-group {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.ha-bpmn-btn,
+.ha-bpmn-viewer-wrap .ha-bpmn-viewer-controls button,
+.ha-bpmn-viewer-wrap .ha-bpmn-viewer-controls .button {
+    all: unset !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 30px !important;
+    min-height: 30px !important;
+    padding: 0 10px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    color: #344054 !important;
+    background: #ffffff !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05) !important;
+    transition: all 0.15s ease !important;
+}
+
+.ha-bpmn-btn:hover,
+.ha-bpmn-viewer-wrap .ha-bpmn-viewer-controls button:hover,
+.ha-bpmn-viewer-wrap .ha-bpmn-viewer-controls .button:hover {
+    background: #f8fafc !important;
+    border-color: #94a3b8 !important;
+    color: #0f172a !important;
+}
+
+/* Lightbox / Fullscreen Mode */
+.ha-bpmn-viewer-wrap.fullscreen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 999999 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.ha-bpmn-viewer-wrap.fullscreen .ha-bpmn-canvas {
+    flex: 1 1 auto !important;
+    height: 100% !important;
+}
+
+/* Protect Minimap in Frontend */
+.djs-minimap svg {
+    min-height: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: content-box !important;
+}
+
+.djs-minimap .map {
+    overflow: hidden !important;
+}
+
+/* Hide modeling palettes in frontend viewer, but allow simulation context pad */
+.ha-bpmn-viewer-wrap .djs-palette,
+.ha-bpmn-viewer-wrap .djs-popup {
+    display: none !important;
+}
+
+.ha-bpmn-viewer-wrap:not(.simulation) .context-pad,
+.ha-bpmn-viewer-wrap:not(.simulation) .djs-context-pad {
+    display: none !important;
+}
+
+/* Lane Styling */
+[data-element-id^="Lane_"] > .djs-visual > rect {
+    stroke: #b0b4b9 !important;
+}
+
+/* ==========================================================================
+   Interactive Task Drawer
+   ========================================================================== */
+.ha-bpmn-task-drawer {
+    position: absolute;
+    top: 0;
+    right: -360px;
+    width: 340px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    border-left: 1px solid #e2e8f0;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.ha-bpmn-task-drawer.open {
+    right: 0;
+}
+
+.ha-drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.ha-drawer-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+}
+
+.ha-drawer-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.ha-drawer-role {
+    display: inline-block;
+    padding: 3px 8px;
+    background: #e0f2fe;
+    color: #0369a1;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.ha-drawer-close {
+    all: unset;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #94a3b8;
+    transition: all 0.15s ease;
+}
+
+.ha-drawer-close:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+.ha-drawer-title {
+    margin: 0 0 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+}
+
+.ha-drawer-content {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ha-drawer-section h4 {
+    margin: 0 0 8px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #64748b;
+}
+
+.ha-drawer-doc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.ha-drawer-footer {
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+    margin-top: 20px;
+}
+
+.ha-drawer-id {
+    font-family: monospace;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+/* ==========================================================================
+   Live Diagram Search
+   ========================================================================== */
+.ha-bpmn-search-bar {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ha-bpmn-search-bar.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.ha-search-input-wrap {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 4px 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    gap: 6px;
+}
+
+.ha-search-icon {
+    color: #94a3b8;
+}
+
+.ha-search-input {
+    all: unset;
+    font-size: 13px;
+    color: #1e293b;
+    width: 180px;
+}
+
+.ha-search-count {
+    font-size: 11px;
+    font-weight: 600;
+    color: #64748b;
+    padding: 0 4px;
+}
+
+.ha-search-btn {
+    all: unset;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #475569;
+}
+
+.ha-search-btn:hover:not(:disabled) {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+.ha-search-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/* Search Highlighting Markers */
+.djs-element.ha-bpmn-search-match .djs-visual > :first-child {
+    stroke: #f59e0b !important;
+    stroke-width: 3px !important;
+}
+
+.djs-element.ha-bpmn-search-active .djs-visual > :first-child {
+    stroke: #d97706 !important;
+    stroke-width: 4px !important;
+    filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.6)) !important;
+}
+
+/* ==========================================================================
+   Process Step Tracker (Status Highlighting)
+   ========================================================================== */
+.djs-element.ha-step-completed .djs-visual > :first-child {
+    stroke: #10b981 !important;
+    stroke-width: 2.5px !important;
+    fill: #ecfdf5 !important;
+}
+
+.ha-status-badge-completed {
+    width: 18px;
+    height: 18px;
+    background: #10b981;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.djs-element.ha-step-active .djs-visual > :first-child {
+    stroke: #0284c7 !important;
+    stroke-width: 3px !important;
+    animation: ha-step-pulse 2s infinite;
+}
+
+.ha-status-badge-active {
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+.ha-pulse-dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #0284c7;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.ha-pulse-dot::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0284c7;
+    border-radius: 50%;
+    animation: ha-pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes ha-step-pulse {
+    0% {
+        filter: drop-shadow(0 0 2px rgba(2, 132, 199, 0.4));
+    }
+    50% {
+        filter: drop-shadow(0 0 10px rgba(2, 132, 199, 0.8));
+    }
+    100% {
+        filter: drop-shadow(0 0 2px rgba(2, 132, 199, 0.4));
+    }
+}
+
+@keyframes ha-pulse-ring {
+    0% {
+        transform: scale(0.6);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+/* ==========================================================================
+   Static SVG Mode
+   ========================================================================== */
+.ha-bpmn-static-wrap svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
